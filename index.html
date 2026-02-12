@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Awan Associates - Premium Real Estate</title>
+    <link rel="icon" type="image/png" href="assets/logo.png">
+    <link rel="shortcut icon" type="image/png" href="assets/logo.png">
+    <link rel="apple-touch-icon" href="assets/logo.png">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-container">
+            <div class="nav-brand">
+    <img src="assets/logo.png" alt="Awan Associates Logo" class="brand-logo">
+    <div class="brand-text">
+    <h1>Awan Associates</h1>
+    <p>Trusted Real Estate • Pakistan</p>
+    </div>
+</div>
+            <button class="toggle-btn">☰</button>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#trending">Properties</a>
+                <a href="#locations">Locations</a>
+                <a href="#agents">Agents</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="hero" id="home">
+        <div class="hero-content">
+            <h2>Find Your Dream Property</h2>
+            <p>Explore premium residential and commercial properties across Pakistan's finest locations</p>
+            <button class="cta-btn" onclick="document.querySelector('#contact').scrollIntoView({behavior: 'smooth'})">Get Started Today</button>
+        </div>
+    </div>
+
+    <section id="trending">
+        <h2>Trending Properties</h2>
+        <div class="cards">
+            <div class="b-card" data-property="1">
+                <img src="assets/home-1.jpeg" alt="Modern House Lahore">
+                <button class="buy-btn" onclick="openPropertyModal(1)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Modern House • Lahore</h3>
+                    <p>5 bed • 4 bath</p>
+                    <p class="price">PKR 6.5 Cr</p>
+                </div>
+            </div>
+            <div class="b-card" data-property="2">
+                <img src="assets/home-2.jpeg" alt="Villa Islamabad">
+                <button class="buy-btn" onclick="openPropertyModal(2)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Villa • Islamabad</h3>
+                    <p>Corner • 1 kanal</p>
+                    <p class="price">PKR 3.5 Cr</p>
+                </div>
+            </div>
+            <div class="b-card" data-property="3">
+                <img src="assets/home-3.jpg" alt="Designer Villa">
+                <button class="buy-btn" onclick="openPropertyModal(3)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Designer Villa</h3>
+                    <p>2 kanal • Prime</p>
+                    <p class="price">PKR 10.00 Cr</p>
+                </div>
+            </div>
+            <div class="b-card" data-property="4">
+                <img src="assets/home-4.png" alt="Traditional Home">
+                <button class="buy-btn" onclick="openPropertyModal(4)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Traditional Home</h3>
+                    <p>Cultural • Villa</p>
+                    <p class="price">PKR 7.5 Cr</p>
+                </div>
+            </div>
+            <div class="b-card" data-property="5">
+                <img src="assets/home-6.jpg" alt="Family Home">
+                <button class="buy-btn" onclick="openPropertyModal(5)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Family Home • Lahore</h3>
+                    <p>10 marla • Stylish</p>
+                    <p class="price">PKR 5.5 Cr</p>
+                </div>
+            </div>
+            <div class="b-card" data-property="6">
+                <img src="assets/home-5.jpg" alt="Hill Home">
+                <button class="buy-btn" onclick="openPropertyModal(6)">Buy Now</button>
+                <div class="card-content">
+                    <h3>Hill Home • Modern</h3>
+                    <p>Scenic • Secluded</p>
+                    <p class="price">PKR 11.75 Cr</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="locations" class="locations">
+        <h2>Best Locations</h2>
+        <div class="location-grid">
+            <div class="location-bar" onclick="openLocationMap('DHA Lahore Phase 6')">DHA Lahore Phase 6</div>
+            <div class="location-bar" onclick="openLocationMap('Behria Town Lahore')">Behria Town Lahore</div>
+            <div class="location-bar" onclick="openLocationMap('Park View City Islamabad')">Park View City Islamabad</div>
+            <div class="location-bar" onclick="openLocationMap('Sector F-6 Islamabad')">Sector F-6 Islamabad</div>
+            <div class="location-bar" onclick="openLocationMap('DHA Rawalpindi')">DHA Rawalpindi</div>
+        </div>
+        
+        <div id="map-container" class="map-container">
+            <h3 id="map-title">Location Map</h3>
+            <iframe id="location-map" src="" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <section id="agents">
+        <h2>Meet Our Agents</h2>
+        <div class="cards">
+            <div class="b-card">
+                <img src="assets/agent-1.jpg" alt="Arfeen Awan">
+                <div class="card-content">
+                    <h3>Arfeen Awan</h3>
+                    <p>CEO • Sahiwal</p>
+                </div>
+            </div>
+            <div class="b-card">
+                <img src="assets/agent-3.jpeg" alt="Rana Sanaullah">
+                <div class="card-content">
+                    <h3>Rana Sanaullah</h3>
+                    <p>Senior Sales & Property Agent</p>
+                    <p>Islamabad</p>
+                </div>
+            </div>
+            <div class="b-card">
+                <img src="assets/agent-2.jpeg" alt="Shafqat Mehmood">
+                <div class="card-content">
+                    <h3>Shafqat Mehmood</h3>
+                    <p>Marketing Manager • Lahore</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Us</h2>
+        <form class="contact-form" id="contactForm">
+            <div class="form-group">
+                <label for="cname">Full Name</label>
+                <input type="text" id="cname" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="cemail">Email Address</label>
+                <input type="email" id="cemail" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="cphone">Phone Number</label>
+                <input type="tel" id="cphone" name="phone" pattern="[0-9+()\-\s]{7,}" required>
+            </div>
+            <button type="submit" class="submit-btn">Submit Inquiry</button>
+        </form>
+    </section>
+
+    <footer id="about">
+        <div class="footer-content">
+            <h3>About Awan Associates</h3>
+            <p>Your trusted partner for residential and commercial properties across Pakistan since 2010. We specialize in premium locations and provide comprehensive real estate solutions.</p>
+            <p style="margin-top: 30px;"><strong>Contact Details</strong></p>
+            <p>Email: info@awanassociates.com</p>
+            <p>Phone: +92 310 9509422</p>
+        </div>
+        <div class="copyright">
+            © 2025 Awan Associates. All rights reserved.
+        </div>
+    </footer>
+
+    <!-- Contact Modal -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <h3 id="modal-title">Success!</h3>
+            <p id="modal-text">Thank you for reaching out. We'll contact you soon.</p>
+            <button class="modal-close" id="modal-close">Close</button>
+        </div>
+    </div>
+
+    <!-- Property Details Modal -->
+    <div class="modal property-modal" id="propertyModal">
+        <div class="property-modal-content">
+            <button class="close-property-modal" onclick="closePropertyModal()">&times;</button>
+            <div class="property-details">
+                <div class="property-image-large">
+                    <img id="propertyImage" src="" alt="Property">
+                </div>
+                <div class="property-info">
+                    <h2 id="propertyTitle"></h2>
+                    <p class="property-price" id="propertyPrice"></p>
+                    <div class="property-description" id="propertyDescription"></div>
+                    
+                    <form class="buyer-form" id="buyerForm">
+                        <h3>Buyer Information</h3>
+                        <div class="form-group">
+                            <label for="buyerName">Full Name *</label>
+                            <input type="text" id="buyerName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerEmail">Email Address *</label>
+                            <input type="email" id="buyerEmail" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerPhone">Contact Number *</label>
+                            <input type="tel" id="buyerPhone" pattern="[0-9+()\-\s]{7,}" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerAddress">Address</label>
+                            <input type="text" id="buyerAddress">
+                        </div>
+                        <div class="form-group">
+                            <label for="buyerMessage">Message for Owner</label>
+                            <textarea id="buyerMessage" rows="4" placeholder="Tell us about your requirements..."></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Submit Interest</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
